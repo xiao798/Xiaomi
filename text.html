@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    $(function () {
+      var index = 0;
+      setInterval(function () {
+        index++;
+        $(".box-img").css("opacity","0");
+        $(".box-img").eq(index).css("opacity","1");
+      },3000)
+    })
+  </script>
+  <style>
+    .box{
+      width: 1226px;
+      height: 457px;
+      position: relative;
+    }
+    .box-img {
+      position: absolute;;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .box-img:nth-child(1){
+      opacity: 1;
+    }
+    .box-left{
+      position: absolute;
+      width: 35px;
+      height: 70px;
+      background-color: #00000050;
+      color: #fff;
+      top: 196px;
+      border-radius: 0 5px 5px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <a href="#">
+    <div class="box-img"><img src="img/newlunbo1.jpg" width="1226" height="457p"> </div>
+  </a>
+  <a href="#">
+    <div class="box-img"><img src="img/newlunbo2.jpg" width="1226" height="457p"> </div>
+  </a>
+  <a href="#">
+    <div class="box-img"><img src="img/newlunbo3.jpg" width="1226" height="457p"> </div>
+  </a>
+  <a href="#">
+    <div class="box-img"><img src="img/newlunbo4.jpg" width="1226" height="457p"> </div>
+  </a>
+  <div class="box-left">&lt;</div>
+  <div class="box-right">&gt;</div>
+
+
+</div>
+</body>
+</html>
